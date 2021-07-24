@@ -5,6 +5,13 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  generate: {
+    routes: [
+      'one',
+      'two',
+    ]
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-sitemap-generator-issue-demos',
@@ -35,11 +42,17 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@/modules/sitemapRoutesModifyingGenerator',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    hostname: 'https://myhost.com',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
