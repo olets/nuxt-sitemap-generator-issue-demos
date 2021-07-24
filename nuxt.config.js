@@ -51,7 +51,17 @@ export default {
   ],
 
   sitemap: {
-    hostname: 'https://myhost.com',
+    hostname: 'unused value',
+    sitemaps: [
+      {
+        hostname: 'https://site1.com',
+        path: '/sitemap-1.xml',
+      },
+      {
+        hostname: 'https://site2.com',
+        path: '/sitemap-2.xml',
+      },
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
